@@ -1,4 +1,4 @@
-<?
+<?php
 /*
  * Plugin Name: Pep's Plugin
  * Plugin Author: Amit Sharma

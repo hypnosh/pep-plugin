@@ -1,6 +1,7 @@
 <?php
 /*
  * Plugin Name: Pep's Plugin
+ * Version: 0.1.0
  * Plugin Author: Amit Sharma
  * Site URL: http://pro.pep.photo/
  * Tags: pep,

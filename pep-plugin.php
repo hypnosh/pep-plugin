@@ -12,7 +12,7 @@ add_shortcode("all_images_today", "pep_all_images_today");
 function pep_all_images_today() {
 	$args = array(
 		'post_type'		=> 'attachment',
-		'post_status'	=> 'publish',
+		'post_status'	=> 'inherit',
 	);
 	$images = get_posts($args);
 

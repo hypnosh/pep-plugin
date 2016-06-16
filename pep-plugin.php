@@ -1,7 +1,11 @@
 <?
 /*
-Author: 13 Llama Studio
-*/
+ * Plugin Name: Pep's Plugin
+ * Plugin Author: Amit Sharma
+ * Site URL: http://pro.pep.photo/
+ * Tags: pep,
+ */
+
 
 add_shortcode("all_images_today", "pep_all_images_today");
 function pep_all_images_today() {

@@ -15,14 +15,11 @@
 		var ids = $(".rejected").map( function() {
 			return $(this).data('id');
 		});
-		$.post(
-			"http://pro.pep.photo/pep/v1" + "/reject-image", 
-			{ids: ids}, 
-			function(response) {
-				if (!response) {
-					$(".rejected").hide();
-				}
-			});
+		$.post( "http://pro.pep.photo/pep/v1" + "/reject-image", {ids: ids}, function(response) {
+			if (!response) {
+				$(".rejected").hide();
+			}
+		});
 	}); // js-reject-images
 	console.log('end of jquery');
 })(jQuery); // $

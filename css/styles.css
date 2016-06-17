@@ -27,7 +27,7 @@
 	padding: 9px 15px 10px;
 }
 .rejected {
-	background: black;
+	background: maroon;
 }
 	.rejected img {
 		opacity: .4;

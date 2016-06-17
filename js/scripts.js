@@ -2,8 +2,8 @@
 
 $( function() {
 	console.log('jquery');
-	$(".js-reject-image").click( function(e) {
-		$(this).toggleClass("rejected");
+	$(".js-reject-image").click( function() {
+		$(this).closest(".grid-image").toggleClass("rejected");
 	}); // js-reject-image
 	$(".js-reject-images").click(function(e)) {
 		e.preventDefault();

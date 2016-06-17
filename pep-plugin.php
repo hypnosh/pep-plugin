@@ -26,8 +26,9 @@ function pep_all_images_today() {
 	echo "<button class='js-reject-images reject-images'>Remove Selected</button>";
 	echo "<ul class='grid-images'>";
 	foreach ($images as $img) {
-		echo "<li class='js-reject-image grid-image' data-id='" . $img->ID . "'>";
+		echo "<li class='grid-image'>";
 			echo "<img src='" . $img->guid . "' class='grid-image-img'>";
+			echo "<a class='js-reject-image' href='#' data-id='" . $img->ID . "'>Reject this</a>";
 		echo "</li>";
 	}
 	echo "</ul>";

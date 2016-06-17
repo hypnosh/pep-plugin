@@ -36,7 +36,7 @@ function pep_all_images_today() {
 function pep_reject_image() {
 	foreach($_POST['ids'] as $id) {
 		if (false !== wp_delete_attachment( $id, false )) {
-			return false
+			return false;
 		} // some error
 	}
 	return $_POST['ids'];

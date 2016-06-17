@@ -1,0 +1,23 @@
+.grid-images {
+	list-style-type: none;
+	margin: 0;
+}
+.grid-image {
+	display: inline-block;
+	width: 360px;
+	text-align: center;
+}
+.grid-image-img {
+	width: 350px;
+	margin: 5px;
+}
+.reject-images {
+	margin: 5px;
+	background-color: crimson;
+	color; white;
+	font-weight: bold;
+	padding: 5px 15px;
+}
+.rejected {
+	opacity: .4;
+}

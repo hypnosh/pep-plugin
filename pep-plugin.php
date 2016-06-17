@@ -7,16 +7,44 @@
  * Tags: pep,
  */
 
+add_action("wp_enqueue_scripts", "pep_enqueue");
+function pep_enqueue() {
+	// wp_enqueue_script('jquery-ui-datepicker');
+	wp_enqueue_style("pep-styles", plugins_url("/css/styles.css", __FILE__));
+	wp_enqueue_script("pep-scripts", plugins_url("/js/scripts.js", __FILE__), array('jquery'));
+} // pep_enqueue
 
 add_shortcode("all_images_today", "pep_all_images_today");
 function pep_all_images_today() {
 	$args = array(
 		'post_type'		=> 'attachment',
 		'post_status'	=> 'inherit',
+		'posts_per_page'=> -1,
 	);
 	$images = get_posts($args);
 
+	echo "<button class='js-reject-images reject-images'>Reject Selected</button>";
+	echo "<ul class='grid-images'>";
 	foreach ($images as $img) {
-		echo "<img src='" . $img->guid . "'>";
+		echo "<li class='js-reject-image grid-image' data-id='" . $img->ID . "'>";
+			echo "<img src='" . $img->guid . "' class='grid-image-img'>";
+		echo "</li>";
 	}
+	echo "</ul>";
 } // pep_all_images_today
+
+function pep_reject_image() {
+	foreach($_POST['ids'] as $id) {
+		if (false !== wp_delete_attachment( $id, false )) {
+			return false
+		} // some error
+	}
+	return $_POST['ids'];
+} // pep_reject_image
+add_action("rest_api_init", function() {
+	register_rest_route('pep/v1', '/reject-image', array(
+			'methods'	=> 'GET',
+			'callback'	=> 'pep_reject_image',
+		)
+	);
+}); // rest_api_init

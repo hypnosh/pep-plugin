@@ -4,10 +4,14 @@
 	console.log('jquery');
 	$(".js-reject-image").click( function(e) {
 		e.preventDefault();
+
+		console.log("x");
 		$(this).toggleClass("rejected");
 	}); // js-reject-image
 	$(".js-reject-images").click(function(e) {
 		e.preventDefault();
+		
+		console.log("y");
 		var ids = $(".rejected").map( function() {
 			return $(this).data('id');
 		});

@@ -1,5 +1,5 @@
 /* scripts.js */
-
+var $ = jQuery;
 $( function() {
 	console.log('jquery');
 	$(".js-reject-image").click( function() {

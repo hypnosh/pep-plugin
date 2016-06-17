@@ -22,7 +22,7 @@ function pep_all_images_today() {
 		'posts_per_page'=> -1,
 	);
 	$images = get_posts($args);
-
+	echo "<div class='spacer'></div>";
 	echo "<button class='js-reject-images reject-images'>Remove Selected</button>";
 	echo "<ul class='grid-images'>";
 	foreach ($images as $img) {

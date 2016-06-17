@@ -27,9 +27,8 @@ function pep_all_images_today() {
 	echo "</div>";
 	echo "<ul class='grid-images'>";
 	foreach ($images as $img) {
-		echo "<li class='grid-image' data-id='" . $img->ID . "'>";
+		echo "<li class='grid-image js-reject-image' data-id='" . $img->ID . "'>";
 			echo "<img src='" . $img->guid . "' class='grid-image-img'>";
-			echo "<a class='js-reject-image' href='#'>Reject this</a>";
 		echo "</li>";
 	}
 	echo "</ul>";

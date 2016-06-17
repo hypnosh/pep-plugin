@@ -18,7 +18,6 @@
 	margin: 5px;
 }
 .reject-images {
-	float: right;
 	margin: 5px;
 	background-color: crimson;
 	color: white;
@@ -28,5 +27,8 @@
 	padding: 9px 15px 10px;
 }
 .rejected {
-	opacity: .4;
+	background: black;
 }
+	.rejected img {
+		opacity: .4;
+	}

@@ -2,9 +2,9 @@
 
 ( function($) {
 	console.log('jquery');
-	$(".js-reject-image").click( function() {
-		alert('hell');
-		$(this).closest(".grid-image").toggleClass("rejected");
+	$(".js-reject-image").click( function(e) {
+		e.preventDefault();
+		$(this).toggleClass("rejected");
 	}); // js-reject-image
 	$(".js-reject-images").click(function(e) {
 		e.preventDefault();

@@ -5,7 +5,7 @@ $( function() {
 	$(".js-reject-image").click( function() {
 		$(this).closest(".grid-image").toggleClass("rejected");
 	}); // js-reject-image
-	$(".js-reject-images").click(function(e)) {
+	$(".js-reject-images").click(function(e) {
 		e.preventDefault();
 		var ids = $(".rejected").map( function() {
 			return $(this).data('id');

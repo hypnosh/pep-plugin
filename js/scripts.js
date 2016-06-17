@@ -20,5 +20,5 @@
 				}
 			});
 	}); // js-reject-images
-
+	console.log('end of jquery');
 })(jQuery); // $

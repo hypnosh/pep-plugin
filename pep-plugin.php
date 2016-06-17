@@ -23,7 +23,7 @@ function pep_all_images_today() {
 	);
 	$images = get_posts($args);
 
-	echo "<button class='js-reject-images reject-images'>Reject Selected</button>";
+	echo "<button class='js-reject-images reject-images'>Remove Selected</button>";
 	echo "<ul class='grid-images'>";
 	foreach ($images as $img) {
 		echo "<li class='js-reject-image grid-image' data-id='" . $img->ID . "'>";
@@ -31,6 +31,7 @@ function pep_all_images_today() {
 		echo "</li>";
 	}
 	echo "</ul>";
+	echo "<button class='js-reject-images reject-images'>Remove Selected</button>";
 } // pep_all_images_today
 
 function pep_reject_image() {

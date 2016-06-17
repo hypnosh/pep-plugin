@@ -1,6 +1,6 @@
 /* scripts.js */
-var $ = jQuery;
-$( function() {
+
+( function($) {
 	console.log('jquery');
 	$(".js-reject-image").click( function() {
 		$(this).closest(".grid-image").toggleClass("rejected");
@@ -20,4 +20,4 @@ $( function() {
 			});
 	}); // js-reject-images
 
-}); // $
+})(jQuery); // $

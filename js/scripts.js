@@ -15,6 +15,7 @@
 		var ids = $(".rejected").map( function() {
 			return $(this).data('id');
 		});
+		console.log(ids);
 		$.post( "http://pro.pep.photo/pep/v1" + "/reject-image", {ids: ids}, function(response) {
 			if (!response) {
 				$(".rejected").hide();

@@ -2,13 +2,13 @@
 
 ( function($) {
 	console.log('jquery');
-	$(".js-reject-image").click( function(e) {
+	$(document).on('click', ".js-reject-image", function(e) {
 		e.preventDefault();
 
 		console.log("x");
 		$(this).toggleClass("rejected");
 	}); // js-reject-image
-	$(".js-reject-images").click(function(e) {
+	$(document).on('click', ".js-reject-images", function(e) {
 		e.preventDefault();
 		
 		console.log("y");

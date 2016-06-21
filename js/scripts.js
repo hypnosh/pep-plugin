@@ -13,7 +13,9 @@
 		
 		console.log("y");
 		var ids = $(".rejected").map( function() {
-			return $(this).data('id');
+			if ($(this).data('id') > 0) {
+				return $(this).data('id');
+			}
 		});
 		console.log(ids);
 		jQuery.post( "http://pro.pep.photo/pep/v1" + "/reject-image", {ids: ids}, function(response) {

@@ -29,6 +29,7 @@
 	border-radius: 6px;
 	font-weight: bold;
 	padding: 9px 15px 10px;
+	cursor: pointer;
 }
 .rejected {
 	background: maroon;

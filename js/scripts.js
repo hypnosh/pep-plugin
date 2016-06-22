@@ -17,11 +17,14 @@
 		}).get();
 		console.log(ids);
 		if (ids.length > 0) {
+			var earlier = $(this).html();
+			$(this).html("Removing").prop('disabled', true);
 			jQuery.post( "http://pro.pep.photo/wp-json/pep/v1" + "/reject-image", {ids: ids}, function(response) {
 				if (!response) {
 					$(".rejected").hide();
 				}
-			});
+				$(this).html(earlier).removeProp('disabled');
+			}.bind(this));
 		} 
 	}); // js-reject-images
 })(jQuery); // $

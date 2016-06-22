@@ -30,6 +30,9 @@
 	font-weight: bold;
 	padding: 9px 15px 10px;
 	cursor: pointer;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
 }
 .rejected {
 	background: maroon;

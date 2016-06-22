@@ -40,3 +40,6 @@
 	.rejected img {
 		opacity: .4;
 	}
+.qq-upload-list li {
+	background-color: #555;
+}

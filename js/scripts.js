@@ -16,7 +16,7 @@
 			}
 		}).get();
 		console.log(ids);
-		jQuery.post( "http://pro.pep.photo/pep/v1" + "/reject-image", {ids: ids}, function(response) {
+		jQuery.post( "http://pro.pep.photo/wp-json/pep/v1" + "/reject-image", {ids: ids}, function(response) {
 			if (!response) {
 				$(".rejected").hide();
 			}

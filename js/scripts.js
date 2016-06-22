@@ -14,7 +14,7 @@
 			if ($(this).data('id') > 0) {
 				return $(this).data('id');
 			}
-		});
+		}).get();
 		console.log(ids);
 		jQuery.post( "http://pro.pep.photo/pep/v1" + "/reject-image", {ids: ids}, function(response) {
 			if (!response) {

@@ -1,17 +1,14 @@
 /* scripts.js */
 
 ( function($) {
-	console.log('jquery');
 	$(document).on('click', ".js-reject-image", function(e) {
 		e.preventDefault();
 
-		console.log("x");
 		$(this).toggleClass("rejected");
 	}); // js-reject-image
 	$(document).on('click', ".js-reject-images", function(e) {
 		e.preventDefault();
 		
-		console.log("y");
 		var ids = $(".rejected").map( function() {
 			console.log($(this).data('id'));
 			if ($(this).data('id') > 0) {
@@ -25,5 +22,4 @@
 			}
 		});
 	}); // js-reject-images
-	console.log('end of jquery');
 })(jQuery); // $

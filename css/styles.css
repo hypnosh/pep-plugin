@@ -3,9 +3,10 @@
 }
 .grid-images {
 	list-style-type: none;
+	text-align: center;
 	margin: 0;
 }
-.grid-image {
+.grid-images .grid-image {
 	display: inline-block;
 	width: 360px;
 	text-align: center;
@@ -13,10 +14,12 @@
 	vertical-align: middle;
 	border: 1px dotted #555;
 	margin: 3px 3px 3px 0;
+	margin-bottom: 0;
 }
 .grid-image-img {
 	width: 350px;
 	margin: 5px;
+	margin-bottom: 0;
 }
 .reject-images {
 	margin: 5px;

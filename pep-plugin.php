@@ -10,8 +10,8 @@
 add_action("wp_enqueue_scripts", "pep_enqueue");
 function pep_enqueue() {
 	// wp_enqueue_script('jquery-ui-datepicker');
-	wp_enqueue_style("pep-styles", plugins_url("/css/styles.css", __FILE__));
-	wp_enqueue_script("pep-scripts", plugins_url("/js/scripts.js", __FILE__), array('jquery'));
+	wp_enqueue_style("pep-styles", plugins_url("/css/styles.css?1", __FILE__));
+	wp_enqueue_script("pep-scripts", plugins_url("/js/scripts.js?1", __FILE__), array('jquery'));
 } // pep_enqueue
 
 add_shortcode("all_images_today", "pep_all_images_today");

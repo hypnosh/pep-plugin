@@ -16,7 +16,7 @@
 			}
 		}).get();
 		console.log(ids);
-		if (count(ids) > 0) {
+		if (ids.length > 0) {
 			jQuery.post( "http://pro.pep.photo/wp-json/pep/v1" + "/reject-image", {ids: ids}, function(response) {
 				if (!response) {
 					$(".rejected").hide();

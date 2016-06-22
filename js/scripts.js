@@ -13,6 +13,7 @@
 		
 		console.log("y");
 		var ids = $(".rejected").map( function() {
+			console.log($(this).data('id'));
 			if ($(this).data('id') > 0) {
 				return $(this).data('id');
 			}

@@ -45,7 +45,7 @@ function pep_reject_image() {
 } // pep_reject_image
 add_action("rest_api_init", function() {
 	register_rest_route('pep/v1', '/reject-image', array(
-			'methods'	=> 'GET',
+			'methods'	=> 'POST',
 			'callback'	=> 'pep_reject_image',
 		)
 	);
